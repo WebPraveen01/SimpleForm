@@ -21,23 +21,36 @@ const [FullName,setFullName] = useState("");
 
   return (
     <>
-
       <h1>Full Name Display</h1>
       <div>
-        <form id ="activeform" onSubmit={handleSubmit}>
-          <label for ="name">FirstName:</label>
-          <input name ="firstName" value = {firstName}type="text" placeholder='Enter the firstName' onChange={(e)=>setFirstName(e.target.value)} required/><br/>
+        <form id="activeform" onSubmit={handleSubmit}>
+          <label for="name">FirstName:</label>
+          <input
+            name="firstName"
+            value={firstName}
+            type="text"
+            placeholder="Enter the firstName"
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+          <br />
 
-          <label for ="name">LastName:</label>
-          <input name ="lastName" value ={lastName} type="text" required placeholder='Enter the lastName' onChange={(e)=>setLastName(e.target.value)}/><br/>
-          <button type='submit'>submit</button>
-
+          <label for="name">LastName:</label>
+          <input
+            name="lastName"
+            value={lastName}
+            type="text"
+            required
+            placeholder="Enter the lastName"
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <br />
+          <button type="submit">submit</button>
         </form>
-        {FullName && <p>FullName:{FullName}</p>}
-
+        {fullName && <p>Full Name: {fullName}</p>}
       </div>
     </>
-  )
+  );
 }
 
 export default App
