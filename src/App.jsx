@@ -47,7 +47,7 @@ const [FullName,setFullName] = useState("");
           <br />
           <button type="submit">submit</button>
         </form>
-        {fullName && <p>Full Name: {fullName}</p>}
+        {FullName && <p>Full Name: {FullName}</p>}
       </div>
     </>
   );
